@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas Page</title>
+</head>
+<body>
+	<p>画布标签学习</p>
+	<canvas id="1"> </canvas>
+	<!-- <canvas id="2"> </canvas>
+	<canvas id="3"> </canvas> -->
+	<script>
+		// var c=document.getElementById('myCanvas');
+		// var ctx=c.getContext('2d');
+		// ctx.fillStyle='#FFFEEE';
+		// ctx.fillRect(0.0.200,100);
+	var c=document.getElementById('1');
+	var ctx=c.getContext('2d');
+	ctx.fillStyle='red';
+	ctx.fillRect(0,0,400,200);
+
+	// var d=document.getElementById('2');
+	// var dtx=c.getContext('2d');
+	// dtx.fillStyle='yellow';
+	// dtx.fillRect(0,0,400,200);
+
+	// var e=document.getElementById('3');
+	// var etx=c.getContext('2d');
+	// etx.fillStyle='yellow';
+	// etx.fillRect(0,0,400,200);
+
+	</script>
+
+</body>
+</html>
+
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head> 
+<body>
+
+<canvas id="myCanvas">你的浏览器不支持 HTML5 canvas 标签。</canvas>
+
+<script>
+var c=document.getElementById('myCanvas');
+var ctx=c.getContext('2d');
+ctx.fillStyle='yellow';
+ctx.fillRect(0,0,400,200);
+</script>
+
+</body>
+</html>

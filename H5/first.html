@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document Title</title>
+</head>
+<body>
+<div style="text-align:center;">
+	<p>Video and Audio control</p>
+
+
+	<button style="color:blue; width: 50; height: 30" onclick="playPause()">play/pause</button>
+	<button style="color:red;  width: 50; height: 30" onclick="makeBig()">big</button>
+	<button style="color:pink;  width: 50; height: 30" onclick="makeNormal()">medium</button>
+	<button style="color:green;  width: 50; height: 30" onclick="makeSmall()">small</button>
+	<p>this is a video...</p>
+
+	<!-- 载入视频 -->
+	<video id="video1" width="420">
+		<source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4">
+	</video>
+
+	<p>This is an audio...
+</p>
+	<audio  id='audio1' controls>
+		<source src="http://www.runoob.com/try/demo_source/horse.mp3" type="audio/mp3">
+	</audio>
+	<!-- <button onclick="audioPlayPause">来一段马鸣声</button> 
+	<audio</audio>
+	-->
+	
+	<!-- 这是一个画布组件 -->
+	<p style="margin: 50px">This is my canvas</p>
+	<!-- 画布组件的按钮阵列 -->
+	<button onclick="fillRed">红色</button>
+	<button onclick="fillGreen">绿色</button>
+	<button onclick="fillYellow">黄色</button>
+	<canvas id="myCanvas" width="200" height="100" style="border: 1px solid #FF0000;"></canvas>
+</div>
+<script type="text/javascript">
+	var myVideo = document.getElementById('video1');
+
+	function playPause(){
+		if (myVideo.paused) 
+			myVideo.play();
+		else
+			myVideo.pause()
+	}
+
+	function makeBig(){
+		myVideo.width = 560;
+	}
+	function makeSmall(){
+		myVideo.width = 300;
+	}
+	function makeNormal(){
+		myVideo.width = 420;
+	}
+
+	var myAudio = document.getElementById('audio1');
+	function audioPlayPause(){
+		if (myAudio.paused) 
+			myAudio.play();
+		else
+			myAudio.pause();
+	}
+
+	var c = document.getElementById('myCanvas');
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "yellow";
+	ctx.fillRect(30,30,100,45);
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(0,0,40,0,3*Math.PI);
+	ctx.stroke();
+	ctx.font="30px Arial";
+	ctx.strokeText("Hello World",20,40)
+	// var c=document.getElementById("myCanvas");
+	// var ctx=c.getContext("2d");
+	// ctx.fillStyle="#FF0000";
+	// ctx.fillRect(0,0,150,75);
+
+
+
+
+	// function fillRed(){
+	// 	ctx.fillStyle="#FF0000";
+	// 	ctx.fillRect(0,30,100,75);
+	// }
+
+	// function fillYellow(){
+	// 	var c = document.getElementById('myCanvas');
+	// 	var ctx = c.getContext("2d");
+	// 	ctx.fillStyle = "#00FF00"
+	// 	ctx.fillRect(0,0,150,75)
+	// }
+
+	// function fillGreen(){
+	// 	var c = document.getElementById('myCanvas');
+	//  	var ctx = c.getContext("2d");
+	// 	ctx.fillStyle = "#0000FF"
+	// 	ctx.fillRect(0,0,100,65)
+	// }
+
+</script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>W3Cschool(w3cschool.cn)</title> 
+</head>
+<body>
+
+<audio controls>
+  <source src="https://www.w3cschool.cn/statics/demosource/horse.ogg" >
+  <source src="https://www.w3cschool.cn/statics/demosource/horse.mp3" >
+您的浏览器不支持 audio 元素。
+</audio>
+
+</body>
+</html> -->
